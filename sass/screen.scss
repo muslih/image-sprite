@@ -1,0 +1,48 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+@import "spr/*.png";
+
+body{
+	background:#eee;
+	font-family:sans-serif;
+}
+
+div{
+	background:#fff;
+	@include border-radius(3px);
+	@include box-shadow(0 0 8px #444);
+	margin:150px auto auto auto;
+	width:70%;
+	text-align:center;
+	padding: 15px;
+}
+ul{
+	list-style: none;
+	margin:0;
+}
+li{
+	display:inline-table;
+	margin: 10px 25px 10px 0;
+	line-height:32px;
+	padding-left:40px;
+	&:last-child{
+		margin-right: 0;
+	}
+	&.facebook{
+		@include spr-sprite("facebook");
+	}
+	&.behance{
+		@include spr-sprite("behance");
+	}
+	&.github{
+		@include spr-sprite("github");
+	}
+	&.google{
+		@include spr-sprite("google");
+	}
+}
